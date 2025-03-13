@@ -19,6 +19,30 @@ GO<-enrichGO( LP$id,#GO富集分析
               qvalueCutoff = 0.05,#设定q值阈值
               readable = T )
 
-barplot(GO, split="ONTOLOGY") +
-  facet_grid(ONTOLOGY~., scale="free_x") + #柱状
-  xlim(0, max(GO@result$Count) * 1.5)
+# barplot(GO, split="ONTOLOGY") +
+#   facet_grid(ONTOLOGY~., scale="free") + #柱状
+#   scale_x_continuous(expand = c(0, 0), limits = c(0, max(GO@result$Count) * 1.5)) +
+#   theme(axis.text.y = element_text(size = 8), # 修改pathway标签字体大小
+#         axis.text.x = element_text(size = 8),
+#         axis.title = element_text(size = 10),
+#         legend.text = element_text(size = 8),    # 调整图例文本的字体大小
+#         legend.title = element_text(size = 10),   # 调整图例标题的字体大小
+#         strip.text = element_text(size = 8) # 修改ontology字体大小
+#         )
+
+ggplot(GO@result, aes(y = reorder(Description, -p.adjust), x = Count, fill = p.adjust)) + 
+  facet_grid(ONTOLOGY ~ ., scales = "free") +
+  geom_bar(stat = "identity", width = 0.8) +  # 设置 bar 的宽度 
+  labs(x = "Count", y = NULL, title = "GO Enrichment") +
+  scale_fill_gradient(low = "#EE7647", high = "#6DAEDB") +  
+  scale_x_continuous(expand = c(0, 0), limits = c(0, max(GO@result$Count) * 1.5)) +
+  scale_y_discrete(labels = scales::wrap_format(20)) +  # 15字符换行
+  theme(axis.text.y = element_text(size = 10), # 修改pathway标签字体大小
+        axis.text.x = element_text(size = 8),
+        axis.title = element_text(size = 10),
+        legend.text = element_text(size = 8),    # 调整图例文本的字体大小
+        legend.title = element_text(size = 10),   # 调整图例标题的字体大小
+        strip.text = element_text(size = 8) # 修改ontology字体大小
+  )
+
+ggsave("GO_enrich.png", plot = last_plot(), width = 8, height = 6, dpi = 300)
