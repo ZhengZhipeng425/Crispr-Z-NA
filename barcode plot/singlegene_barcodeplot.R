@@ -6,7 +6,7 @@ Lowmin <- min(Low$sgrna_lfc)
 Lowmax <- max(Low$sgrna_lfc)
 
 xlim <- c(min(Highmin, Lowmin) - 1, max(Highmax, Lowmax) + 1)
-gene<-list("IGF2BP1", "JMJD6", "EIF4H", "MRPS9","EXOSC2","RNASE11","SNX10","HNRNPU","IGF2BP2","IGF2BP3")
+gene<-list("OGG1")
 # top and bottom are segments' begin and end positions
 ytop <- c(2.5, 5)
 ybottom <- c(0.5, 3)

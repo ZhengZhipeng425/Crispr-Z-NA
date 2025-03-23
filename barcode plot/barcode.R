@@ -2,7 +2,7 @@ sg<-High
 sg<-sg[order(sg$sgrna_lfc),]
 
 xlim<-c(min(sg$sgrna_lfc)-1,max(sg$sgrna_lfc)+1)
-gene<-list("IGF2BP1", "JMJD6", "EIF4H")
+gene<-list("OGG1")
 
 allcolor <- adjustcolor("#C0C0C0", alpha.f = 0.2)
 alllwd <- 0.3
