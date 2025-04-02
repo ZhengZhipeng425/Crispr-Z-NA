@@ -1,0 +1,124 @@
+Pathway_categories	Number	Type
+Rna polymerase	10	.
+Aminoacyl-trna biosynthesis	21	.
+Primary bile acid biosynthesis	10	Metabolism
+African trypanosomiasis	11	Human Diseases
+Protein export	7	Genetic Information Processing
+Other types of o-glycan biosynthesis	2	.
+Nicotinate and nicotinamide metabolism	10	Metabolism
+Other glycan degradation	11	Metabolism
+Type i diabetes mellitus	12	.
+Basal transcription factors	18	Genetic Information Processing
+Malaria	12	Human Diseases
+Renin-angiotensin system	8	Organismal Systems
+Ascorbate and aldarate metabolism	9	Metabolism
+Vasopressin-regulated water reabsorption	8	Organismal Systems
+Nitrogen metabolism	4	Metabolism
+Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate	9	Metabolism
+Porphyrin and chlorophyll metabolism	14	Metabolism
+Pantothenate and coa biosynthesis	5	.
+Snare interactions in vesicular transport	16	.
+Steroid biosynthesis	6	Metabolism
+Fructose and mannose metabolism	11	Metabolism
+Thiamine metabolism	10	Metabolism
+Citrate cycle (tca cycle)	13	.
+Apoptosis - multiple species	7	Cellular Processes
+Glyoxylate and dicarboxylate metabolism	19	Metabolism
+Propanoate metabolism	8	Metabolism
+Caffeine metabolism	1	Metabolism
+Pentose and glucuronate interconversions	10	Metabolism
+Neomycin	"GCK/HK1"	.
+Notch signaling pathway	7	Environmental Information Processing
+Endocrine and other factor-regulated calcium reabsorption	16	Organismal Systems
+D-glutamine and d-glutamate metabolism	2	.
+Sulfur metabolism	4	Metabolism
+N-glycan biosynthesis	27	.
+Biotin metabolism	2	Metabolism
+Bladder cancer	9	Human Diseases
+Graft-versus-host disease	9	Human Diseases
+Ferroptosis	8	Cellular Processes
+Glycosaminoglycan biosynthesis - heparan sulfate / heparin	13	Metabolism
+Ubiquinone and other terpenoid-quinone biosynthesis	5	Metabolism
+Arginine biosynthesis	12	Metabolism
+Beta-alanine metabolism	7	.
+Allograft rejection	10	Human Diseases
+Base excision repair	4	Genetic Information Processing
+Hippo signaling pathway - multiple species	6	Environmental Information Processing
+Butanoate metabolism	10	Metabolism
+Cholesterol metabolism	9	.
+Primary immunodeficiency	11	Human Diseases
+Sulfur relay system	3	Genetic Information Processing
+Non-homologous end-joining	3	Genetic Information Processing
+Autophagy - other	9	Cellular Processes
+Linoleic acid metabolism	7	Metabolism
+Cocaine addiction	21	Human Diseases
+Alanine	"ADSS/GAD1/GAD2/ABAT/NAT8L/DDO/FOLH1/RIMKLB/IL4I1/GFPT1/ASPA/GLUL/ALDH5A1/GLUD2/ASL/PPAT"	.
+Nucleotide excision repair	18	Genetic Information Processing
+Phototransduction	11	Organismal Systems
+Circadian rhythm	10	Organismal Systems
+Taurine and hypotaurine metabolism	2	Metabolism
+Intestinal immune network for iga production	12	.
+Pentose phosphate pathway	6	Metabolism
+Vibrio cholerae infection	18	Human Diseases
+Alpha-linolenic acid metabolism	6	.
+Glycine	"GLDC/DLD/MAOA/ALDH7A1/SHMT1/SDSL/PIPOX/ALAS1/GNMT/SRR/PGAM1/PHGDH/GRHPR/ALAS2/CBS/DMGDH/PGAM2"	.
+Fat digestion and absorption	8	Organismal Systems
+Vitamin digestion and absorption	11	Organismal Systems
+Terpenoid backbone biosynthesis	3	Metabolism
+Fatty acid elongation	9	Metabolism
+Glycosphingolipid biosynthesis - lacto and neolacto series	12	Metabolism
+Histidine metabolism	4	Metabolism
+Maturity onset diabetes of the young	9	Human Diseases
+Aldosterone-regulated sodium reabsorption	17	Organismal Systems
+Prion diseases	4	Human Diseases
+Ovarian steroidogenesis	4	Organismal Systems
+Phenylalanine metabolism	6	Metabolism
+Dna replication	14	.
+Synthesis and degradation of ketone bodies	2	Metabolism
+Ether lipid metabolism	10	Metabolism
+Thyroid cancer	11	Human Diseases
+One carbon pool by folate	7	Metabolism
+Riboflavin metabolism	1	Metabolism
+Fatty acid degradation	11	Metabolism
+Vitamin b6 metabolism	2	.
+Autoimmune thyroid disease	12	Human Diseases
+Mucin type o-glycan biosynthesis	9	.
+Pyruvate metabolism	5	Metabolism
+Hedgehog signaling pathway	11	Environmental Information Processing
+Collecting duct acid secretion	9	Organismal Systems
+Mannose type o-glycan biosynthesis	6	.
+Homologous recombination	10	Genetic Information Processing
+Biosynthesis of unsaturated fatty acids	6	Metabolism
+Lipoic acid metabolism	1	Metabolism
+Selenocompound metabolism	4	Metabolism
+Glycosylphosphatidylinositol (gpi)-anchor biosynthesis	8	.
+Fatty acid metabolism	14	Metabolism
+Starch and sucrose metabolism	17	Metabolism
+Proteasome	7	Genetic Information Processing
+Glycosaminoglycan biosynthesis - keratan sulfate	4	Metabolism
+Valine	"DLD/MCCC1/AOX1/ALDH7A1/HMGCL/ABAT/ACADSB/HSD17B10/AACS/OXCT2/EHHADH/ACSF3/IL4I1/ACAT2/IVD/ALDH3A2"	.
+Mineral absorption	18	Organismal Systems
+Nicotine addiction	12	Human Diseases
+Valine	"SDSL"	.
+Asthma	7	Human Diseases
+Arginine and proline metabolism	10	Metabolism
+Tryptophan metabolism	14	Metabolism
+Folate biosynthesis	12	Metabolism
+Fatty acid biosynthesis	4	Metabolism
+Type ii diabetes mellitus	14	.
+Carbohydrate digestion and absorption	14	Organismal Systems
+Cysteine and methionine metabolism	9	Metabolism
+Proximal tubule bicarbonate reclamation	4	Organismal Systems
+Galactose metabolism	8	Metabolism
+Sphingolipid metabolism	8	Metabolism
+Abc transporters	14	.
+Phenylalanine	"PAH/GOT2/GOT1/TAT"	.
+Phosphonate and phosphinate metabolism	2	Metabolism
+2-oxocarboxylic acid metabolism	11	.
+Glycosphingolipid biosynthesis - ganglio series	10	Metabolism
+Amino sugar and nucleotide sugar metabolism	16	Metabolism
+Antifolate resistance	11	Human Diseases
+Mismatch repair	9	Genetic Information Processing
+Glycosphingolipid biosynthesis - globo and isoglobo series	3	Metabolism
+Tyrosine metabolism	5	Metabolism
+Glycosaminoglycan degradation	5	Metabolism
