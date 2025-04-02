@@ -21,8 +21,7 @@ def get_gene_id(gene_name):
         return None
 
 
-file_path = Path("/Users/zhengzhipeng/Documents/GitHub/Z-NA-Crispr-Screening/Crispr Sequencing "
-                 "data/AnalysisScripts/GO_enrich/LP_lfc_p_flitered.csv")
+file_path = Path("HP_lfc_p_flitered_mirfree.csv")
 file_name = file_path.name
 file_stem = file_path.stem  # Use stem to exclude extension
 file_extension = file_path.suffix  # To get extension

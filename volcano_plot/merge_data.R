@@ -1,7 +1,7 @@
 # Select two dataframes you want to merge
 
-df1 <- High_positive_mirfree
-df2 <- High_negative_mirfree
+df1 <- Low_positive_mirfree
+df2 <- Low_negative_mirfree
 
 # Combine operation, define the variable name such as`pos|p-value`
 combined <- df1 %>%
@@ -15,4 +15,4 @@ combined <- df1 %>%
 combined <- combined %>%
   rename(lfc = `neg|lfc`)
 
-write.csv(combined, "High_p_merged.csv", row.names = FALSE)
+write.csv(combined, "Low_p_merged.csv", row.names = FALSE)

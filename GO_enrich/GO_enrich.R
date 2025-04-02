@@ -11,24 +11,13 @@ library(org.Hs.eg.db)
 
 #指定富集分析的物种库
 GO_database <- 'org.Hs.eg.db' #GO分析指定物种，物种缩写索引表详见http://bioconductor.org/packages/release/BiocViews.html#___OrgDb
-GO<-enrichGO( LP$id,#GO富集分析
+GO<-enrichGO( HP$id,#GO富集分析
               OrgDb = GO_database,
               keyType = "ENTREZID",#设定读取的gene ID类型
               ont = "ALL",#(ont为ALL因此包括 Biological Process,Cellular Component,Mollecular Function三部分）
               pvalueCutoff = 0.05,#设定p值阈值
               qvalueCutoff = 0.05,#设定q值阈值
               readable = T )
-
-# barplot(GO, split="ONTOLOGY") +
-#   facet_grid(ONTOLOGY~., scale="free") + #柱状
-#   scale_x_continuous(expand = c(0, 0), limits = c(0, max(GO@result$Count) * 1.5)) +
-#   theme(axis.text.y = element_text(size = 8), # 修改pathway标签字体大小
-#         axis.text.x = element_text(size = 8),
-#         axis.title = element_text(size = 10),
-#         legend.text = element_text(size = 8),    # 调整图例文本的字体大小
-#         legend.title = element_text(size = 10),   # 调整图例标题的字体大小
-#         strip.text = element_text(size = 8) # 修改ontology字体大小
-#         )
 
 ggplot(GO@result, aes(y = reorder(Description, -p.adjust), x = Count, fill = p.adjust)) + 
   facet_grid(ONTOLOGY ~ ., scales = "free") +
@@ -45,4 +34,4 @@ ggplot(GO@result, aes(y = reorder(Description, -p.adjust), x = Count, fill = p.a
         strip.text = element_text(size = 8) # 修改ontology字体大小
   )
 
-ggsave("GO_enrich.png", plot = last_plot(), width = 8, height = 6, dpi = 300)
+# ggsave("GO_enrich.png", plot = last_plot(), width = 8, height = 6, dpi = 300)
