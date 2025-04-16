@@ -15,14 +15,16 @@ GO<-enrichGO( HP$id,#GO富集分析
               OrgDb = GO_database,
               keyType = "ENTREZID",#设定读取的gene ID类型
               ont = "ALL",#(ont为ALL因此包括 Biological Process,Cellular Component,Mollecular Function三部分）
-              pvalueCutoff = 0.05,#设定p值阈值
-              qvalueCutoff = 0.05,#设定q值阈值
+              pvalueCutoff = 1,#设定p值阈值
+              qvalueCutoff = 0.3,#设定q值阈值
               readable = T )
 
-ggplot(GO@result, aes(y = reorder(Description, -p.adjust), x = Count, fill = p.adjust)) + 
-  facet_grid(ONTOLOGY ~ ., scales = "free") +
+GO@result$TermLabel <- paste0(GO@result$Description, "[", GO@result$ONTOLOGY, "] ")
+
+ggplot(GO@result, aes(y = reorder(TermLabel, -p.adjust), x = Count, fill = p.adjust)) + 
+  #facet_grid(ONTOLOGY ~ ., scales = "free") +
   geom_bar(stat = "identity", width = 0.8) +  # 设置 bar 的宽度 
-  labs(x = "Count", y = NULL, title = "GO Enrichment") +
+  labs(x = "Count", y = NULL, title = NULL) +
   scale_fill_gradient(low = "#EE7647", high = "#6DAEDB") +  
   scale_x_continuous(expand = c(0, 0), limits = c(0, max(GO@result$Count) * 1.5)) +
   scale_y_discrete(labels = scales::wrap_format(20)) +  # 15字符换行
@@ -34,4 +36,4 @@ ggplot(GO@result, aes(y = reorder(Description, -p.adjust), x = Count, fill = p.a
         strip.text = element_text(size = 8) # 修改ontology字体大小
   )
 
-# ggsave("GO_enrich.png", plot = last_plot(), width = 8, height = 6, dpi = 300)
+ggsave("GO_LP.png", width = 8, height = 7, dpi = 300)
