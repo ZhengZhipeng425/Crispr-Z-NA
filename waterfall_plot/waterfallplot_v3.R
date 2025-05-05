@@ -1,13 +1,16 @@
-lfc_column <- "pos.lfc"  # 用户可以修改为其他列名
+lfc_column <- "pos|lfc"  # 用户可以修改为其他列名
 
 # 读取高亮基因列表
 # tmp <- read.csv('/Users/zhengzhipeng/Documents/GitHub/Crispr-Z-NA/sg.csv', header = FALSE)
 # highlight_genes <- as.character(tmp[,1])  # 确保是字符型
-highlight_genes <- list("FANCI", "ILF3", "IRS4", "NUP93", "ZNF768", "NUP205", "FABP5", "SLC4A10")
+highlight_genes <- list("JMJD6", "MRPS9", "FANCI",
+                        "IRS4", "NUP205", "ZNF768",
+                        "TAF1", "POLR1E", "GTF3C5", "HNRNPA1",
+                        "WDR33", "PCF11")
 
 # 读取数据
-data <- read.csv('/Users/zhengzhipeng/Documents/GitHub/Z-NA-Crispr-Screening/Crispr Sequencing data/AnalysisScripts/Low_vs_lnput.positive.csv')
-
+# data <- read.csv('/Users/zhengzhipeng/Documents/GitHub/Z-NA-Crispr-Screening/Crispr Sequencing data/AnalysisScripts/Low_vs_lnput.positive.csv')
+data <- Low_vs_lnput_positive
 # 按 LFC 值降序排列
 data_sorted <- data[order(data[[lfc_column]], decreasing = TRUE), ]
 data_sorted$x_coord <- seq(1, nrow(data_sorted), by = 1)
@@ -40,7 +43,7 @@ data_sorted$label_y <- ifelse(data_sorted$id %in% highlight_data$id,
                               NA)
 
 # 生成图形对象
-plot <- ggplot(data_sorted, aes(x = x_coord, y = .data[[lfc_column]])) +
+ggplot(data_sorted, aes(x = x_coord, y = .data[[lfc_column]])) +
   geom_hline(yintercept = 0, color = "#323232", linewidth = 0.5) +
   geom_hline(yintercept = 0.7, linetype = "dashed", color = "#6DAEDB", linewidth = 0.5) +
   geom_hline(yintercept = -0.7, linetype = "dashed", color = "#6DAEDB", linewidth = 0.5) +
@@ -65,9 +68,9 @@ plot <- ggplot(data_sorted, aes(x = x_coord, y = .data[[lfc_column]])) +
   # 在右侧显示基因标签
   geom_text(data = data_sorted[data_sorted$color == "red" , ],
             aes(x = label_x, y = label_y, label = label),
-            size = 3, hjust = 0) +
+            size = 6, hjust = 0) +
   
-  labs(title = "LFC", x = "Gene", y = "Log2 Fold Change") +
+  labs(title = NULL, x = "Gene", y = "Log2 Fold Change") +
   scale_color_manual(values = c("gray", "#EE7647")) +
   scale_size_continuous(range = c(0, 1.2)) +
   scale_alpha_continuous(range = c(0, 1)) +
@@ -90,4 +93,4 @@ plot <- ggplot(data_sorted, aes(x = x_coord, y = .data[[lfc_column]])) +
 
 # print(plot)
 # 保存图形到文件
-ggsave("~/Documents/GitHub/Crispr-Z-NA/waterfall_plot/2nd_verification_Low.png", plot, bg = "transparent", dpi = 800)
+ggsave("Low_waterfall.png", width = 9.5, height = 8, dpi = 800)
